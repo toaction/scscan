@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "scscan"
+version = "0.0.1"
+description = "A Python library for extracting symbol and structural information from Solidity smart contracts."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Lx" }]
+keywords = ["solidity", "smart-contract", "symbol-extraction"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/toaction/scscan"
+Repository = "https://github.com/toaction/scscan"
+Issues = "https://github.com/toaction/scscan/issues"
+
+[project.optional-dependencies]
+dev = [
+    "twine>=6.2.0",
+    "pytest>=8.0.0",
+    "ruff>=0.8.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/scscan"]
